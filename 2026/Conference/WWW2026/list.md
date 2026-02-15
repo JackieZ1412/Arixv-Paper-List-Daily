@@ -1,3 +1,5 @@
+# WWW 2026
+
 * Breaking the Single-Reference-Vector Barrier in Approximate Nearest Neighbor Search 
 * IVQ-GNN: Mitigating Performance Gaps from Graph Connection Pattern Inconsistency via Vector Quantization
 * PruneRAG: Confidence-Guided Query Decomposition Trees for Efficient Retrieval-Augmented Generation
