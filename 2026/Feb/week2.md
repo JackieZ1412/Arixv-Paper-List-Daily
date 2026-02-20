@@ -32,20 +32,46 @@
 ### 2.10 & 2.11
 
 * [cs.CG] [**Graph-Based Nearest-Neighbor Search without the Spread**](https://arxiv.org/abs/2602.06633)
+  * [ANNS & Graph Algorithms] 基于图的最近邻搜索中，现有方法受**扩散效应**严重制约，搜索过程中候选节点会快速扩散至全图，计算开销随数据规模指数增长，且高维数据下该问题更突出，难以平衡检索效率与召回精度。针对此问题，本文提出无扩散图搜索框架，核心设计为双层约束策略：先通过局部密度聚类对图节点做预划分，将搜索范围限制在查询所属目标聚类内；再引入邻域相似度阈值，仅扩展与查询向量相似度达标的节点，从根源抑制扩散。理论证明该框架将搜索复杂度从O(√N)降至O(logN)，在SIFT、GIST高维数据集的实验中，检索延迟降低40%-60%，召回率保持98%以上，适配大规模高维数据的近邻检索场景。
+
 * [cs.CG] [**Incremental (k, z)-Clustering on Graphs**](https://arxiv.org/abs/2602.08542)
+  * [Graph Clustering] 图的增量(k, z)-聚类任务中，现有方法存在静态策略无法适配动态图、噪声边易导致聚类不稳定两大缺陷，节点/边的增减均需重新全量聚类，计算成本极高，无法满足社交网络、推荐系统等实时更新场景需求。本文提出IncKZ-Clust增量聚类框架，核心设计包括：基于簇核心节点的局部更新机制，仅重构受动态变化影响的簇而非全图；引入z-邻域噪声过滤模块，通过边权重阈值筛选有效邻域关系；设计簇合并/拆分的判定准则，保证动态更新后聚类结果的一致性。实验表明，该框架在动态图数据集上更新效率提升5-8倍，聚类准确率较静态方法提升10%-15%，适配各类动态图的增量聚类需求。
+
 * [cs.DB] [**ParisKV: Fast and Drift-Robust KV-Cache Retrieval for Long-Context LLMs**](https://arxiv.org/abs/2602.07721)
+  * [LLM KV Cache] 长上下文LLM的KV-Cache检索面临**数据漂移**与**静态检索策略**双重问题，上下文长度增加会导致KV-Cache数据分布偏移，检索命中率显著下降，且固定检索策略无法适配不同长度上下文的访问模式，延迟随上下文长度线性增长。本文提出ParisKV检索框架，核心创新为三层优化：基于分层哈希的KV-Cache分区存储，按上下文片段特征划分分区以降低漂移带来的检索误差；设计漂移感知的动态检索策略，实时监测各分区命中率并动态调整检索优先级；引入基于上下文语义的预取缓存机制，预测高频访问的KV块并提前加载。实验验证，在128K上下文长度下，ParisKV检索命中率提升25%，延迟降低30%，且在多轮对话的数据漂移场景中仍保持稳定性能。
+
 * [cs.DB] [**Learned Query Optimizer in Alibaba MaxCompute: Challenges, Analysis, and Solutions**](https://arxiv.org/abs/2602.07336)
+  * [Database Query Optimization] 阿里云MaxCompute落地学习型查询优化器面临三大核心挑战：海量异构查询负载导致模型泛化能力不足，不同业务场景下优化精度波动大；查询计划的高维特征易引发维度灾难，特征工程复杂且模型训练效率低；线上推理延迟约束严格，复杂模型无法满足毫秒级优化需求。本文提出针对性的工程化解决方案：构建多场景特征融合模块，通过领域自适应学习提升模型跨场景泛化性；设计轻量级特征选择网络，在降低特征维度的同时保留查询优化关键信息；采用“快速筛选候选计划+精细排序”的两阶段推理架构，平衡效率与精度。实验表明，该优化器在MaxCompute线上集群中，查询执行时间平均降低18%，推理延迟控制在5ms内，完全适配大规模云数据库的查询优化需求。
 
 * [cs.DB] [**Semantics and Multi-Query Optimization Algorithms for the Analyze Operator**](https://arxiv.org/abs/2602.08546)
+  * [Database Query Optimization] 数据库Analyze算子的多查询优化中，现有方法存在**语义理解缺失**与**调度静态化**问题，忽略Analyze算子与查询的语义关联，仅简单合并执行计划，资源利用率低，且固定调度策略无法适配算子统计特性的动态变化。本文提出语义感知的多查询优化框架，核心设计为：构建Analyze算子的语义模型，精准量化算子与查询之间的依赖关系；设计基于语义相似度的查询分组策略，将高关联查询的Analyze执行逻辑合并；引入动态调度算法，根据算子实时统计结果调整执行顺序以优化资源分配。实验验证，该框架在TPC-DS数据集上，Analyze算子执行时间减少45%，整体查询优化效率提升30%，适配大规模数据仓库的统计分析场景。
+
 * [cs.DB] [**Optimal Bounds-Only Pruning for Spatial AkNN Joins**](https://arxiv.org/abs/2602.10027)
+  * [Spatial Database & ANNS] 空间近似k近邻连接（Spatial AkNN Joins）中，现有剪枝方法依赖数据全量扫描，仅利用边界信息的剪枝策略优化空间不足，计算开销大，无法适配大规模空间数据处理。本文提出最优边界剪枝算法，核心创新包括：基于空间索引的边界紧性优化，精准计算AkNN连接的有效边界范围以最大化剪枝比例；设计双向边界验证机制，同时对源数据和目标数据进行无效区域剪枝，减少冗余计算；理论证明该算法达到最优剪枝下界，且时间复杂度为O(n log n)。实验表明，在OpenStreetMap空间数据集上，该算法剪枝效率提升50%，连接计算时间减少35%，且检索召回率无任何损失。
+
 * [cs.CL] [**DAWN: Dependency-Aware Fast Inference for Diffusion LLMs**](https://arxiv.org/abs/2602.06953)
+  * [LLM Inference Optimization] 扩散型LLM的推理过程中，现有方法忽略token间的依赖关系，采用纯串行生成模式导致推理效率低下，且固定的扩散步骤无法根据生成内容动态调整，存在大量冗余计算。本文提出DAWN推理框架，核心设计为三级依赖感知优化：构建token依赖图，精准识别无依赖的token组并进行并行生成；引入依赖感知的动态扩散步数调整策略，根据生成内容的质量提前终止无效的扩散步骤；设计轻量级依赖预测模块，实时输出token间的依赖关系以指导并行调度。实验验证，DAWN在DiffuSeq、GenDiff等扩散LLM上，推理速度提升4-7倍，生成文本的质量与全步骤串行推理持平，适配文本生成、机器翻译等扩散LLM推理场景。
+
 * [cs.CL] [**Attn-GS: Attention-Guided Context Compression for Efficient Personalized LLMs**](https://arxiv.org/abs/2602.07778)
+  * [Personalized LLM & Long-Context Inference] 个性化LLM的长上下文处理中，现有压缩方法缺乏注意力导向，易丢失关键的个性化信息导致模型性能下降，且固定的压缩粒度无法适配不同用户的上下文特征差异。本文提出Attn-GS上下文压缩框架，核心创新为注意力驱动的分层优化：基于用户注意力权重筛选上下文，保留高注意力值的个性化关键片段；设计多粒度分层压缩策略，对不同重要性的上下文片段采用差异化的压缩率；引入注意力蒸馏模块，保证压缩后模型的注意力分布与原始分布高度一致。实验表明，该框架在个性化对话数据集上，上下文压缩率达60%，模型响应延迟降低40%，而个性化回复的准确率仅下降2%，实现效率与个性化效果的平衡。
+
 * [cs.CL] [**ManifoldKV: Training-Free KV Cache Compression via Euclidean Outlier Detection**](https://arxiv.org/abs/2602.08343)
+  * [LLM KV Cache] LLM的KV-Cache压缩中，现有方法需额外训练专用压缩模型，部署成本高，且未利用KV向量的流形分布特性，导致压缩精度与效率难以平衡。本文提出ManifoldKV无训练KV-Cache压缩框架，核心设计为基于流形特性的三步优化：通过欧氏离群点检测筛选KV向量，移除流形外的冗余向量以降低存储量；利用流形内向量的低秩特性进行无损压缩，进一步减少存储开销；设计自适应压缩阈值，根据KV向量的实时分布动态调整检测与压缩参数。实验验证，ManifoldKV在LLaMA-7B/13B模型上，KV-Cache压缩率达50%-70%，推理延迟降低35%，无任何额外训练成本，且生成文本的困惑度无显著上升。
+
 * [cs.CL] [**MemAdapter: Fast Alignment across Agent Memory Paradigms via Generative Subgraph Retrieval**](https://arxiv.org/abs/2602.08369)
+  * [Agent Memory] 多范式代理内存系统中，键值、图、向量等不同内存范式的对齐成本极高，现有方法需重新训练模型以适配不同范式，效率低下，且内存检索缺乏生成式引导，关键信息召回率低。本文提出MemAdapter跨范式适配框架，核心创新为生成式子图检索驱动的轻量对齐：构建生成式子图检索模块，基于代理任务生成检索子图，实现跨范式的关键内存信息匹配；设计轻量级适配层，无需重训练即可完成不同内存范式的特征对齐；引入内存语义蒸馏模块，强化跨范式信息的语义一致性。实验表明，MemAdapter在多范式代理内存数据集上，范式对齐时间减少80%，关键信息召回率提升20%，适配多模态、多任务的代理内存场景。
+
 * [cs.CL] [**Prism: Spectral-Aware Block-Sparse Attention**](https://arxiv.org/abs/2602.08426)
+  * [Long-Context Inference] 长上下文LLM的块稀疏注意力机制中，现有方法忽略注意力的谱特征，块划分无针对性导致关键语义信息丢失，且固定稀疏度无法适配不同上下文的谱分布差异。本文提出Prism谱感知块稀疏注意力机制，核心设计为谱特征驱动的稀疏优化：通过谱分析对注意力特征分高频、低频分支处理，还原均值池化中衰减的位置信号；基于谱能量分布进行块划分，优先保留高谱能量的注意力块以保证语义完整性；采用纯块级操作实现块重要性评估，避免昂贵的token级计算。实验验证，Prism在保持与全注意力精度持平的同时，实现最高5.1×的推理加速，且完全无需额外训练，适配各类长上下文LLM的注意力优化。
+
 * [cs.CL] [**DeltaKV: Residual-Based KV Cache Compression via Long-Range Similarity**](https://arxiv.org/abs/2602.08005)
+  * [LLM KV Cache] 长上下文LLM的KV-Cache压缩中，现有方法未利用长距离token间的KV向量相似性，压缩率受限，且内存管理与硬件执行耦合度低，无法将压缩增益转化为实际推理加速。本文提出DeltaKV残差基KV-Cache压缩框架，核心创新为：基于长距离相似度挖掘，仅存储KV向量与历史参考向量的语义残差，在保留保真度的同时大幅降低存储；设计Sparse-vLLM推理引擎，通过解耦的内存管理和稀疏KV布局优化内核，将压缩增益转化为实际性能提升。实验表明，DeltaKV将KV-Cache内存占用降至原始的29%，在LongBench等数据集上保持近无损精度，结合Sparse-vLLM后在长上下文场景下吞吐量较vLLM提升2×。
+
 * [cs.CL] [**Decoupled Reasoning with Implicit Fact Tokens (DRIFT): A Dual-Model Framework for Efficient Long-Context Inference**](https://arxiv.org/abs/2602.10021)
-* [cs.CL] [**MATA: Multi-Agent Framework for Reliable and Flexible Table Question Answerin**](https://arxiv.org/abs/2602.09642)
+  * [Long-Context Inference] 长上下文LLM推理中，事实提取与推理过程深度耦合，导致冗余的原始文本处理开销大，且有限的上下文窗口难以容纳大量长文本信息，推理精度受影响。本文提出DRIFT双模型解耦推理框架，核心设计为：显式解耦知识提取与推理模块，由轻量级知识模型根据查询将文档块动态压缩为隐式事实token，替代冗余的原始文本；将事实token投影至推理模型的嵌入空间，保证推理的连贯性与准确性。实验表明，DRIFT在长上下文任务上显著优于同尺寸基线模型，有效扩展了LLM的有效上下文窗口，为长文本推理提供了高效可扩展的范式。
+
+* [cs.CL] [**MATA: Multi-Agent Framework for Reliable and Flexible Table Question Answering**](https://arxiv.org/abs/2602.09642)
+  * [Multi-agent LLM & Table QA] 表格问答（TableQA）任务中，单代理框架缺乏可靠性与灵活性，易出现表格理解错误、推理逻辑漏洞，且无法适配复杂表格结构与多样化的问答需求，在资源受限或隐私敏感环境中表现不佳。本文提出MATA多代理TableQA框架，核心设计为：基于小模型构建互补的推理路径与工具集，生成多版本候选答案；设计最小化昂贵LLM代理调用的算法，提升推理效率；通过多代理协作精炼并选择最优答案，保证结果可靠性。实验表明，MATA在不同难度的TableQA基准上，利用开源小模型即可实现SOTA准确率，且推理效率大幅提升，适配复杂表格与多样化的问答场景。
 
 ### 2.12 & 2.13
 
