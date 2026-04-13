@@ -1,0 +1,79 @@
+### 4.6-4.7
+
+* [cs.IR] [**SuperLocalMemory V3.3: The Living Brain -- Biologically-Inspired Forgetting, Cognitive Quantization, and Multi-Channel Retrieval for Zero-LLM Agent Memory Systems**](sslocal://flow/file_open?url=https%3A%2F%2Farxiv.org%2Fabs%2F2604.04514&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
+  * [Agent Memory & Biologically-Inspired Design] 面向无LLM参与的轻量化智能体内存系统，提出类脑记忆机制：引入生物学启发的遗忘规则、认知量化与多通道检索，在不依赖大模型语义理解的前提下实现稳定、低开销的长时记忆管理，适合端侧智能体与轻量助手。
+
+* [cs.IR] [**Prompt Compression in the Wild: Measuring Latency, Rate Adherence, and Quality for Faster LLM Inference**](sslocal://flow/file_open?url=https%3A%2F%2Farxiv.org%2Fabs%2F2604.02985&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
+  * [Prompt Compression & Practical Evaluation] 实测真实场景下各类提示压缩方案，从延迟、压缩率遵从度、生成质量三个维度系统评测，揭示不同压缩策略在实际推理服务中的工程表现与适用条件，为线上LLM服务提速提供选型依据。
+
+* [cs.IR] [**SelRoute: Query-Type-Aware Routing for Long-Term Conversational Memory Retrieval**](sslocal://flow/file_open?url=https%3A%2F%2Farxiv.org%2Fabs%2F2604.02431&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
+  * [Conversational Memory & Retrieval Routing] 针对长期对话记忆检索，提出按查询类型动态路由的SelRoute机制：根据用户问题类型（事实查询、偏好回顾、意图理解）自动选择最优检索路径与记忆片段，提升长对话记忆召回准确率与效率。
+
+* [cs.IR] [**PRISM: LLM-Guided Semantic Clustering for High-Precision Topics**](sslocal://flow/file_open?url=https%3A%2F%2Farxiv.org%2Fabs%2F2604.03180&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
+  * [Semantic Clustering & Topic Modeling] 提出LLM引导的语义聚类框架PRISM，结合向量表示与大模型细粒度语义校验，实现高精度主题提取与文档聚类，解决传统聚类在语义模糊、多主题文档上效果差的问题。
+
+* [cs.DC] [**TokenDance: Scaling Multi-Agent LLM Serving via Collective KV Cache Sharing**](sslocal://flow/file_open?url=https%3A%2F%2Farxiv.org%2Fabs%2F2604.03143&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
+  * [Multi-Agent Serving & KV Cache Sharing] 面向多智能体LLM服务，提出TokenDance集体KV缓存共享架构，让多个智能体实例复用公共前缀与共享上下文缓存，大幅降低内存占用与重复计算，实现高并发、大规模智能体服务扩展。
+
+* [cs.DB] [**Cardinality Estimation for High Dimensional Similarity Queries with Adaptive Bucket Probing**](sslocal://flow/file_open?url=https%3A%2F%2Farxiv.org%2Fabs%2F2604.04603&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
+  * [Vector DB & Cardinality Estimation] 针对高维向量相似查询，提出自适应桶探测的基数估计方法，解决向量数据库中查询结果数量预估不准的问题，提升查询优化、资源调度与系统稳定性。
+
+* [cs.DB] [**Unified and Efficient Approach for Multi-Vector Similarity Search**](sslocal://flow/file_open?url=https%3A%2F%2Farxiv.org%2Fabs%2F2604.02815&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
+  * [Multi-Vector Search & Unified Index] 提出统一高效的多向量相似检索方案，将多向量文档（如文本+图像、多片段嵌入）整合为单一检索结构，避免多次检索与后融合，在保持精度的同时显著提升检索速度。
+
+* [cs.DB] [**Distance Comparison Operations Are Not Silver Bullets in Vector Similarity Search: A Benchmark Study on Their Merits and Limits**](sslocal://flow/file_open?url=https%3A%2F%2Farxiv.org%2Fabs%2F2604.02801&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
+  * [Vector Search & Distance Metric Benchmark] 系统性基准测试证明：距离计算（内积、欧氏、余弦等）并非万能，不同度量在不同数据分布、索引结构、任务下存在明显优劣；给出工程选型指南，纠正“通用最优距离”误区。
+
+* [cs.CL] [**LightThinker++: From Reasoning Compression to Memory Management**](sslocal://flow/file_open?url=https%3A%2F%2Farxiv.org%2Fabs%2F2604.03679&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
+  * [Reasoning & Memory Compression] 在LightThinker基础上扩展，从推理链压缩延伸到智能体内存管理，通过压缩冗余推理轨迹、精简记忆条目，在有限内存下保持复杂推理能力，适合资源受限设备部署。
+
+* [cs.AI] [**Rashomon Memory: Towards Argumentation-Driven Retrieval for Multi-Perspective Agent Memory**](sslocal://flow/file_open?url=https%3A%2F%2Farxiv.org%2Fabs%2F2604.03588&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
+  * [Multi-Perspective Memory & Argumentation] 提出Rashomon Memory，基于辩论式检索构建多视角智能体内存，让记忆系统能同时保留矛盾信息、多维度观点，支持更全面、鲁棒的决策与对话，适合复杂场景下的深度思考型智能体。
+
+### 4.8-4.10
+* [cs.IR] Task-Adaptive Retrieval over Agentic Multi-Modal Web Histories via Learned Graph Memory
+  * [Agent Memory & Task-Adaptive Retrieval] 这篇工作关注智能体在长期、多模态 Web 交互历史中的记忆检索问题。典型场景是网页操作 agent 在执行新任务时，需要从过去的截图、HTML 文本、结构化状态和操作轨迹里找出最相关的信息。难点在于“相关性”不是固定的，它会随着当前任务阶段、数据模态和时间距离不断变化，因此传统基于静态相似度阈值、固定大小缓冲区或普通向量召回的方法很容易取回无关历史。作者提出 ACGM，用可学习图记忆来建模 agent 历史，把不同历史观察之间的关系表示成任务自适应的相关图，并直接用下游任务成功率做策略梯度优化。它还显式建模不同模态的时间衰减差异，并把图做成稀疏结构以降低检索复杂度。实验在 WebShop、VisualWebArena 和 Mind2Web 上都优于大量强基线，说明这类“任务驱动而非静态相似度驱动”的记忆检索框架，对 agent memory 和多步网页智能体都很有参考价值。
+* [cs.DB] CubeGraph: Efficient Retrieval-Augmented Generation for Spatial and Temporal Data
+  * [RAG System & Spatio-Temporal Retrieval] 这篇论文讨论的是带有空间和时间过滤条件的 RAG 检索。典型场景包括地图问答、轨迹分析、时空日志检索等，查询既要做高维向量近邻搜索，又要满足地理区域、时间区间等约束。现有系统通常把向量索引嵌套在 R-tree 一类低维结构里，导致查询时要调用多个彼此割裂的子索引，既破坏图路由的全局连通性，也带来明显的遍历与调度开销，面对复杂边界过滤时尤其困难。CubeGraph 的核心思想是用分层网格切分空间，在每个 cell 内维护模块化向量图；真正查询时，再把所有与过滤条件相交的 cell 图动态拼接起来，形成一次统一的近邻遍历。这样就把“结构过滤”和“向量搜索”整合成一套原生执行路径，而不是两套索引的松散拼装。论文摘要给出的结论是，在真实数据集上它明显优于现有基线，在查询性能、扩展性和复杂混合负载适应性上都有优势。这篇对做 RAG 系统、向量数据库和结构化向量检索都很值得关注。
+* [cs.AR] SwarmIO: Towards 100 Million IOPS SSD Emulation for Next-generation GPU-centric Storage Systems
+  * [GPU-centric Storage & SSD Emulation] 这篇工作面向 GPU 发起 I/O 的新型存储系统。随着 GPU 线程级并行越来越强、SSD 也朝着超高随机读 IOPS 优化，很多下一代系统开始探索“GPU 直接驱动存储访问”的架构。但研究这类系统有一个很现实的问题：现有 SSD 仿真器主要服务传统 CPU 主导的存储栈，在 GPU 场景下既吃不下巨量请求流，也难以高效模拟 GPU 发起 I/O 的控制路径与数据路径，更别说在极高请求速率下维护精细时间模型。SwarmIO 就是为此设计的，它是一个面向大规模并行、GPU 中心化存储的 SSD 仿真框架，目标是高保真模拟 IOPS 优化型 SSD。摘要里给出的结果很强：它在 GPU 发起 I/O 场景下相对现有最强 SSD emulator 获得数百倍加速，并在向量检索案例中显示，当 SSD IOPS 从 2.5M 提升到 40M 时，端到端性能可以获得接近一个数量级的提升。对做 GPU 存储、向量数据库 I/O 栈、KV/ANN 外存化的人来说，这是一篇非常有基础设施价值的论文。
+* [cs.AR] Comparative Characterization of KV Cache Management Strategies for LLM Inference
+  * [LLM KV Cache & Empirical Characterization] 这篇论文不是再提一个新 KV cache 系统，而是系统化比较已有方案。它的背景是：LLM 自回归解码中，KV cache 把计算复杂度从平方级降到线性级，但随着模型变大、上下文变长、并发请求增加，KV cache 本身又成为显存与带宽瓶颈。现在社区已经有不少管理框架，例如张量卸载、token 驱逐、推测式调度等，但不同方法在不同模型、不同请求规模下到底谁更好，其实并不清楚。作者选了 vLLM、InfiniGen 和 H2O 三种代表性框架，从延迟、吞吐、显存占用等指标，在请求速率、模型规模、稀疏程度等条件下做实证比较。论文的价值不在“提出新算法”，而在于摸清 trade-off：什么情况下应该选 offloading，什么情况下 eviction 更合适，什么负载会导致不同系统性能反转。对你们实验室这种长期跟 KV 管理、长上下文推理、系统实现的人来说，这类 characterization paper 很有意义，因为它能帮助判断真正值得发力的瓶颈点到底在哪。
+* [cs.DC] Taming GPU Underutilization via Static Partitioning and Fine-grained CPU Offloading
+  * [GPU Sharing & Resource Utilization] 这篇工作聚焦 GPU 利用率不足的问题。随着 GPU 算力和显存容量不断上升，很多科学计算、AI 和数据分析应用都可能在同一台机器上共享 GPU，但真正把这些资源吃满并不容易，因为不同应用对算力和显存的需求比例差异很大。作者首先系统比较了多种 GPU sharing 方案，尤其是 MIG 这种把 GPU 切成固定分区的方式，分析真实应用在分片共享时的吞吐、能耗和资源干扰情况。结论是 MIG 虽然能缓解资源闲置，但由于 compute 和 memory 的粗粒度绑定，经常和应用真实需求错配，而且还会通过功耗等共享资源引入干扰。为了解决这种错配，论文进一步提出一种内存卸载机制，利用 cache-coherent Nvlink-C2C 把部分内存压力转移出去，让粗粒度切片能更贴近应用需求。整体看，这篇更偏系统资源管理与异构架构协同，对 GPU 推理服务、MIG 部署和大模型系统资源调度都很有启发。
+* [cs.DC] LogAct: Enabling Agentic Reliability via Shared Logs
+  * [Agent System Reliability & Shared Log] 这篇论文解决的是生产级 agent 的可靠性问题。LLM agent 和普通推理服务不同，它会调用工具、写数据库、触发外部动作，因此一旦执行顺序混乱、系统失败或环境异常，就很难恢复，甚至可能产生不可逆副作用。作者提出 LogAct，把 agent 抽象成“播放共享日志的解构状态机”：agent 的动作先写入共享日志，再真正执行；日志中的动作还可以被外部 voter 在执行前拦下，从而支持审计、策略控制和安全防护。更重要的是，这种结构天然支持失败恢复，因为无论 agent 进程还是环境本身崩掉，都可以根据共享日志一致地重建执行状态。论文还进一步利用日志历史做 agent introspection，让 agent 自己分析执行历史，从而实现语义级恢复、健康检查和优化。摘要中的实验表明，LogAct 能高效而正确地从故障中恢复，还能在 swarm 场景下降低 token 开销，并在目标模型上拦截不想要的动作，同时 benign utility 只下降约 3%。这是一篇非常典型的“agent 系统工程化”论文。
+* [cs.DC] Nexus: Transparent I/O Offloading for High-Density Serverless Computing
+  * [Serverless Systems & I/O Offloading] 这篇论文面向高密度 serverless 平台。Serverless 为了实现经济性，通常依赖极强的多租户部署，而目前主流方案多基于 VM，因为 VM 既有良好的隔离性，也和现有 FaaS 编程模型兼容。但问题在于，现有架构把应用逻辑和 I/O 处理耦合在一起，导致每个 VM 都要重复携带云 SDK、RPC、TCP/IP 等一整套通信栈，造成明显的内存和 CPU 浪费。作者的测量显示，这部分重复通信框架能占到函数内存开销的四分之一以上，并让 VM 的 CPU 周期相对裸机翻倍。Nexus 的方法是构建一个 serverless-native、基于 KVM 的 hypervisor，在 API 边界拦截 I/O，把通信框架透明地卸载到宿主机的常驻共享后端，用零拷贝共享内存完成数据交换。这样既保留了原本的编程生态和兼容性，又能把 I/O 从 guest VM 中剥离出来。实验结果显示它能显著降低节点级 CPU 和内存占用，提高部署密度，并同时改善 warm-start 和 cold-start 延迟。
+* [cs.DC] ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache
+  * [Multi-LoRA Serving & Copy-on-Write KV Cache] 这篇工作非常贴近你们关心的 agent serving 与 KV cache。背景是大模型服务正在从单模型问答转向复杂多 agent 工作流，不同 agent 往往共享一个 base model，但加载不同 LoRA 适配器来承担不同角色。LoRA 虽然能让多个专用 agent 共存，但它会带来一个关键问题：共享上下文下，不同 LoRA 激活会使 KV cache 发生分歧，传统 prefix cache 因而失效，最终每个 agent 都要维护自己的一份 KV，显存迅速爆炸。ForkKV 借用了操作系统里的 fork + copy-on-write 思想，把 KV cache 拆成“大共享部分”和“轻量私有部分”，使新 fork 出来的 agent 可以继承共享缓存，只在必须分叉时才复制增量状态。为支持这一机制，作者设计了 DualRadixTree 管理共享/私有缓存关系，又提出 ResidualAttention kernel，在片上 SRAM 中直接重构分离式 KV。实验表明，它在多种模型和数据集上可以把多 LoRA 服务吞吐提升到现有系统的 3 倍左右，而生成质量几乎不受影响。对 multi-agent serving 来说，这是很值得细读的一篇。
+* [cs.DS] $k$-Clustering via Iterative Randomized Rounding
+  * [Clustering Theory & Approximation] 这篇论文属于更偏理论算法的方向，讨论的是经典的 k-clustering 问题。场景上，它面向需要把对象划分成 k 个簇、同时最小化某种聚类代价的任务，这类问题在数据分析、设施选址和相似性组织中都很常见。问题在于很多高质量方法要么只给理论保证、实现代价高，要么只能在特定实例上表现较好。作者提出一种迭代随机舍入方法，把连续优化解一步步转化为离散聚类方案，希望兼顾理论保证与实际性能。虽然这篇和你们实验室主线的直接关系不如 KV、RAG 或 agent memory 那么强，但若后续做聚类型索引构建、向量分桶或 memory organization，它提供的近似优化思路仍然有一定启发意义。由于摘要侧重理论方法而非系统数字，这篇更适合作为算法工具性参考，而不是当作当前的重点精读对象。
+* [cs.DS] Solving Hard Instances from Knapsack and Bounded Knapsack Problems: A new state-of-the-art solver
+  * [Combinatorial Optimization & Solver] 这篇论文处理的是背包问题和有界背包问题中的困难实例。它的背景比较经典：背包问题虽然定义简单，但在很多资源分配、缓存选择、预算约束和组合优化场景中都是底层核心模型；真正困难的实例往往组合空间极大，现有求解器即使能求最优，也常常耗时很长。作者提出新的 state-of-the-art solver，重点改进困难实例上的搜索、剪枝与界估计能力。对于你们实验室的直接应用，它不一定是本周最相关的论文，但如果后续把缓存准入、预算分配、层间资源分配或多目标选择问题抽象成 knapsack 类问题，这种 solver 设计和难例处理思路还是可以借鉴。整体上它更偏基础算法工具，不像 ForkKV、StructKV 这种直接服务于大模型系统。
+* [cs.LG] KV Cache Offloading for Context-Intensive Tasks
+  * [KV Offloading & Context-Intensive Evaluation] 这篇论文讨论的是 KV offloading 在“高上下文依赖任务”中的真实性能。已有工作往往把 KV cache 卸载当成显存节省与延迟优化的普遍解法，但大多数评测任务其实并不需要从上下文里抽取大量信息，因此很可能高估了卸载策略的有效性。作者专门定义并构建了 context-intensive task——也就是解题过程必须频繁查阅输入 prompt 中大量信息的任务，并提出 Text2JSON 这样的新 benchmark，用来衡量模型在需要从原始文本抽取结构化知识时，offloading 是否仍然靠谱。结果很关键：在 Llama 3 和 Qwen 3 上，现代 KV offloading 方法在这类任务上出现明显性能退化。这说明“KV 可以搬走”并不等价于“模型还能高质量地反复访问这些上下文信息”。对你们后续想做 CoT / reasoning / agent 场景下的 KV 管理尤其重要，因为这些场景往往比普通聊天更接近 context-intensive，而不是普通 benchmark。
+* [cs.LG] ADAPTive Input Training for Many-to-One Pre-Training on Time-Series Classification
+  * [Time-Series Pretraining] 这篇论文聚焦时间序列分类中的 many-to-one 预训练。它的典型场景是给定一段时间序列输入，模型只输出单个标签，因此模型能否在预训练阶段学到稳定而泛化的序列表征非常关键。作者指出，传统 many-to-one 预训练往往对输入构造方式过于固定，无法充分利用时间序列内部的多尺度、局部与全局模式。论文提出 ADAPTive Input Training，希望通过更灵活的输入组织方式提升预训练效率和下游分类表现。虽然这和你们数据库、KV cache、RAG 的主线关系不强，但从“输入重构影响表征质量”这个角度，对理解序列建模和任务定制训练仍然有参考意义。整体上这篇不是你们本批次的优先精读对象，更适合在实验室做泛时序基础模型的人关注。
+* [cs.LG] Rethinking Residual Errors in Compensation-based LLM Quantization
+  * [LLM Quantization & Residual Compensation] 这篇论文关注大模型量化中的残差补偿问题。很多低比特量化方法会在主量化路径之外引入补偿机制，以减轻量化误差，但补偿到底在什么情况下有效、残差误差如何传播、是否存在新的误差放大来源，往往没有被系统解释。作者试图重新审视 compensation-based quantization 中的残差结构，并给出更合理的误差分析与改进方向。对实验室主线而言，这篇和 KV cache 压缩、长上下文推理不是完全同一问题，但如果你们后续考虑权重与 KV 的联合压缩、或者大模型系统中的精度—资源权衡，这篇可以作为量化侧的重要补充。它更偏模型压缩理论与实现，而不是面向 agent / memory 的系统论文。
+* [cs.LG] Flux Attention: Context-Aware Hybrid Attention for Efficient LLMs Inference
+  * [Efficient Attention & Dynamic Routing] 这篇论文针对长上下文下标准 attention 的二次复杂度瓶颈。已有混合注意力方法通常把 full attention 和 sparse attention 结合起来，但很多做法使用静态分配比例，无法根据具体输入与任务的检索需求自适应变化；另一方面，头级别的动态稀疏常带来负载不均和同步拖尾，反而不利于硬件加速。Flux Attention 的核心思路是把动态决策放到“层”这个粒度上，在冻结的预训练 LLM 中加入轻量 Layer Router，根据上下文特征为每一层决定是走 full attention 还是 sparse attention。这样既保留了动态性，又避免了 head-level 稀疏带来的工程复杂度。虽然摘要中没有给出完整数字，但从定位看，它适合在不重训基础模型的前提下改进长上下文推理效率。对你们来说，这篇更像“attention 路由层面的效率优化”，与 KV 管理可以形成互补。
+* [cs.LG] Efficient Learned Data Compression via Dual-Stream Feature Decoupling
+  * [Learned Compression] 这篇是学习型数据压缩方向的论文。它关注的问题是，在一个统一特征流里同时承担“可压缩表达”和“高质量重建”两种目标时，模型容易在两者之间相互牵制。作者提出双流特征解耦，让一部分表征更服务于压缩编码，另一部分更偏向重建恢复，希望提升整体率失真表现。就你们实验室当前方向而言，这篇和数据库、RAG、KV cache 没有直接重合，但如果后续做 KV 表征压缩、外存缓存压缩或者 learned systems 中的表示压缩，这类思路可能成为方法学来源。它更适合作为“相关技术旁支”，而不是这一批的主线论文。
+* [cs.AI] PASK: Toward Intent-Aware Proactive Agents with Long-Term Memory
+  * [Proactive Agent & Long-term Memory] 这篇论文研究主动式 agent，也就是不仅被动响应用户指令，而是要在流式上下文中主动推断用户潜在需求并提前干预。作者认为此前研究多停留在实验室环境，没有充分处理现实应用里的复杂性、模糊性、实时约束和长期记忆依赖。为此，他们提出 DD-MM-PAS 这一总体范式，把主动 agent 拆成需求检测、记忆建模和系统基础设施三部分；在 PASK 系统中，又进一步实现了流式 IntentFlow 模型做需求识别，以及 workspace / user / global 三层混合记忆做长期建模。论文还构建了 LatentNeeds-Bench，一个基于用户授权数据并经大量人工编辑构造的现实基准。整体来看，这篇的重点不在单点算法，而在“主动感知 + 长期记忆 + 系统闭环”的完整框架。对你们关注的 agent memory 和多轮长期交互非常相关，尤其适合用来把“memory 不只是存储，还要支撑主动行为”这个视角补进实验室讨论。
+* [cs.CL] Joint Optimization of Reasoning and Dual-Memory for Self-Learning Diagnostic Agent
+  * [Diagnostic Agent & Dual Memory] 这篇论文把 memory 和 reasoning 明确放在一起联合优化。背景是临床诊断能力不是只靠医学知识，还来自长期积累的可复用经验模式；而现有许多诊断 agent 把病例彼此独立处理，无法持续沉淀经验。作者提出 SEA，一个带认知启发双记忆模块的自学习诊断 agent，其中短期记忆保留当前决策相关的即时信息，长期记忆负责沉淀规则和可迁移经验；训练上则专门设计强化学习框架，联合优化推理过程和记忆管理。实验结果在摘要中给得很明确：在 MedCaseReasoning 上准确率达到 92.46%，显著高于最强基线；在长时程 ER-Reason 数据上也得到最好的最终准确率和最大的持续提升。更重要的是，专家评审认为 SEA 从经验中提炼出的规则具有较强的临床正确性和实用性。虽然这是医疗场景，但其核心思想——把 reasoning path 与 dual-memory co-design——对通用 agent 很有借鉴意义。
+* [cs.CL] HingeMem: Boundary Guided Long-Term Memory with Query Adaptive Retrieval for Scalable Dialogues
+  * [Dialogue Memory & Query-Adaptive Retrieval] 这篇论文关注长期对话系统中的记忆检索。现有方法常依赖持续摘要，或者用 OpenIE 构图后再配固定 top-k 检索，但这两条路线都存在问题：前者容易反复压缩造成信息损失，后者在不同查询类型下不够灵活，还会带来额外构图与检索开销。HingeMem 引入“事件分段”思想，把长期对话按照人、时间、地点、主题四类元素的变化划出边界；一旦某一要素变化，就写入一个新片段并构建 boundary-triggered hyperedge。这样既减少重复写入，也能保留更清晰的语义结构。检索时，系统不再固定 top-k，而是根据查询动态决定两件事：一是从哪类索引入口取回记忆，二是取多深、多大范围的上下文。这个“query-adaptive”设计比传统固定召回更像真实对话系统的需要。对做 long-term memory、agent chat memory、个性化助手的人来说，这篇是很值得仔细看的。
+* [cs.CL] StructKV: Preserving the Structural Skeleton for Scalable Long-Context Inference
+  * [Long-context Inference & Structure-aware KV Compression] 这篇论文研究长上下文推理中的 KV 压缩问题。当前很多压缩方法都是在某一层、某一时刻用局部 saliency 指标去判断 token 是否重要，然后裁掉“不重要”的状态。作者指出这种局部视角有系统性缺陷：有些 token 在某一层看似不活跃，但实际上是跨层传播中的全局信息枢纽，一旦被删掉，就会破坏整段文本或推理链的结构骨架。StructKV 的核心创新有三点：首先通过 Global In-Degree Centrality 聚合网络深度上的注意力模式，识别真正的全局枢纽 token；其次用 Dynamic Pivot Detection 自适应找出最适合压缩的层；最后用 Structural Propagation and Decoupling 把计算预算和存储预算分开管理。整体上，它不只是“找显著 token”，而是在保护 long-context 推理中的结构性依赖。对做 CoT、reasoning、agent 轨迹压缩尤其重要，因为这些任务往往比普通问答更依赖结构骨架而非局部热点。
+* [cs.LG] Improving Sparse Memory Finetuning
+  * [Sparse Memory Finetuning] 这篇工作聚焦 sparse memory finetuning。它关心的是如何在参数高效微调或带外部记忆的模型中，更稳定地利用稀疏记忆机制来增强模型能力。现有方法往往在记忆访问、梯度传播或训练稳定性上存在不足，导致虽然理论上节省参数和算力，但实际收益不稳定。作者提出改进的 sparse memory finetuning 方法，希望提升训练过程的可控性与最终效果。它与 agent memory、RAG memory 的关系是间接的：它更多讨论“如何训练好带稀疏记忆的模型”，而不是“如何系统化管理长期记忆”。因此优先级可能低于 HingeMem、HyperMem、PASK 这类更直接面向 memory system 的论文，但如果未来你们考虑把 memory 模块融入可训练模型，这篇仍有方法论价值。
+* [cs.AI] Lightweight LLM Agent Memory with Small Language Models
+  * [Lightweight Agent Memory & Small LM] 这篇论文回应了一个很现实的问题：很多 agent memory 系统虽然号称“长期记忆”，但在线阶段仍然严重依赖大模型参与记忆写入、整理和检索判断，结果是延迟高、成本高、难以部署到轻量场景。作者提出用小语言模型来承担更轻量、更频繁的记忆管理任务，希望把 agent memory 从“大模型重度依赖”转向“轻量化可落地”。这类系统通常把高频在线决策压缩到小模型侧，而把更复杂的抽象、总结、归档放到低频或离线阶段，以降低运行成本。论文的意义不只是换个更小的 backbone，而是在提醒大家：memory system 的工程可用性，往往取决于 memory 管理本身是否足够便宜。对于端侧 agent、低成本助手和长时运行系统，这篇非常值得关注，也和你之前关心的小模型 agent memory 问题直接相关。
+* [cs.CL] HyperMem: Hypergraph Memory for Long-Term Conversations
+  * [Long-term Conversation & Hypergraph Memory] 这篇工作是长期对话 memory 方向里比较有代表性的一篇。它指出传统 RAG 或普通图记忆大多只表达 pairwise relation，也就是“这个事实和那个事实有关”，但真实长期对话往往牵涉到多实体、多事件、多主题之间的高阶关系，简单边连接很难把这类复杂依赖组织清楚。HyperMem 因此提出超图记忆结构，用更高阶的 hyperedge 把多个相关元素共同连接起来，再配合分层检索机制处理不同粒度的信息需求。它的意义在于：memory 不只是存碎片，也不只是存图，而是要让系统能在长期交互中恢复复杂关系结构。摘要显示，该方法在长期对话基准上取得了很强的效果。对你们实验室来说，这篇和 HingeMem 可以一起看：前者更强调事件边界与检索路由，后者更强调高阶关系结构，两者都代表了 agent conversation memory 从“向量召回”向“结构化记忆”演进的趋势。
+* [cs.AI] HybridKV: Hybrid KV Cache Compression for Efficient Multimodal Large Language Model Inference
+  * [Multimodal LLM & Hybrid KV Compression] 这篇论文把 KV cache 压缩问题推进到了多模态场景。与纯文本 LLM 不同，多模态模型在输入中还要处理图像或视频 token，这会使 KV cache 膨胀得更快，显存瓶颈也更严重。很多已有压缩方法是在纯文本场景设计出来的，直接迁移到多模态模型时，往往忽视不同模态信息密度和冗余模式并不一样。HybridKV 的核心目标，就是设计一种适用于 MLLM 的混合式 KV 压缩机制，让系统能在视觉和文本状态之间做更合理的压缩分配。虽然摘要页这里没有展开很多细节，但从问题设置看，这篇的价值在于把“KV 压缩”从文本推理问题扩展到真正更复杂的多模态推理问题。对实验室后续如果考虑 Agent + Vision、RAG + multimodal retrieval，或者视觉长上下文推理，这篇会是非常自然的延展阅读。
